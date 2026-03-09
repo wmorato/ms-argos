@@ -83,3 +83,18 @@
     font-size: 0.9rem;
     color: var(--text-2);
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .grid,
+    .skeleton {
+        grid-template-columns: 1fr;
+    }
+
+    .infoBox {
+        padding: 1.25rem;
+    }
+}

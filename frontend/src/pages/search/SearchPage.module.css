@@ -153,7 +153,9 @@
     gap: 1rem;
 }
 
-.resultsHeader {}
+.resultsHeader {
+    margin-bottom: 0.5rem;
+}
 
 .resultsTitle {
     font-size: 1.2rem;
@@ -580,12 +582,77 @@
     }
 }
 
-@media (max-width: 900px) {
+/* Responsive Updates */
+@media (max-width: 1024px) {
     .layout {
         flex-direction: column;
+        gap: 1.5rem;
     }
 
     .quickPanel {
         width: 100%;
+        padding: 1.25rem;
+    }
+
+    .quickList {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .quickItem {
+        flex: 1;
+        min-width: calc(50% - 0.25rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .searchBox {
+        padding: 1.25rem;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metricsGrid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .modalHeader {
+        padding: 1.25rem;
+    }
+
+    .modalBody {
+        padding: 1.25rem;
+    }
+
+    .modalFooter {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .totalAmount {
+        font-size: 1.5rem;
+    }
+
+    .modalContent {
+        max-height: 90vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .quickItem {
+        min-width: 100%;
     }
 }

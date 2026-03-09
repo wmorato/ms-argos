@@ -56,18 +56,34 @@ router.post('/', authMiddleware, adminMiddleware, async (req, res) => {
 // PATCH /api/users/:id
 router.patch('/:id', authMiddleware, adminMiddleware, async (req, res) => {
     const { id } = req.params;
-    const { name, role, companyId, active } = req.body;
+    const { name, email, password, role, companyId, active } = req.body;
 
     try {
+        let password_hash = undefined;
+        if (password && password.trim().length >= 8) {
+            const ROUNDS = parseInt(process.env.BCRYPT_ROUNDS) || 12;
+            password_hash = await bcrypt.hash(password, ROUNDS);
+        }
+
         const result = await pool.query(
             `UPDATE users SET
-        name = COALESCE($1, name),
-        role = COALESCE($2, role),
-        company_id = COALESCE($3, company_id),
-        active = COALESCE($4, active),
-        updated_at = NOW()
-       WHERE id = $5 AND deleted_at IS NULL RETURNING id, name, email`,
-            [name, role, companyId, active, id]
+                name = COALESCE($1, name),
+                email = COALESCE($2, email),
+                password_hash = COALESCE($3, password_hash),
+                role = COALESCE($4, role),
+                company_id = CASE WHEN $5 = 'null' THEN NULL WHEN $5 IS NULL THEN company_id ELSE CAST($5 AS INTEGER) END,
+                active = COALESCE($6, active),
+                updated_at = NOW()
+            WHERE id = $7 AND deleted_at IS NULL RETURNING id, name, email`,
+            [
+                name || null,
+                email ? email.toLowerCase().trim() : null,
+                password_hash || null,
+                role || null,
+                companyId === null ? 'null' : (companyId || null),
+                active !== undefined ? active : null,
+                id
+            ]
         );
 
         if (!result.rows.length) {
@@ -76,6 +92,9 @@ router.patch('/:id', authMiddleware, adminMiddleware, async (req, res) => {
 
         res.json({ user: result.rows[0] });
     } catch (err) {
+        if (err.code === '23505') {
+            return res.status(409).json({ error: 'E-mail já cadastrado.' });
+        }
         logger.error('Erro ao atualizar usuário:', err);
         res.status(500).json({ error: 'Erro interno.' });
     }

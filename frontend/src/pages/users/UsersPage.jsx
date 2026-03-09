@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Users, Plus, CheckCircle, XCircle, Trash2 } from 'lucide-react'
+import { Users, Plus, Edit2, Trash2, CheckCircle, XCircle } from 'lucide-react'
 import { toast, ToastContainer } from 'react-toastify'
 import api from '../../services/api'
 import Button from '../../components/ui/Button'
@@ -11,7 +11,9 @@ export default function UsersPage() {
     const [companies, setCompanies] = useState([])
     const [loading, setLoading] = useState(true)
     const [showForm, setShowForm] = useState(false)
-    const [form, setForm] = useState({ name: '', email: '', password: '', role: 'user', companyId: '' })
+    const initialForm = { name: '', email: '', password: '', role: 'user', companyId: '' }
+    const [form, setForm] = useState(initialForm)
+    const [editingId, setEditingId] = useState(null)
     const [saving, setSaving] = useState(false)
 
     function load() {
@@ -27,14 +29,45 @@ export default function UsersPage() {
         e.preventDefault()
         setSaving(true)
         try {
-            await api.post('/users', { ...form, companyId: form.companyId || undefined })
-            toast.success('Usuário criado! Ele deverá trocar a senha no 1º acesso.')
+            if (editingId) {
+                await api.patch(`/users/${editingId}`, {
+                    ...form,
+                    companyId: form.companyId || null,
+                    password: form.password || undefined
+                })
+                toast.success('Usuário atualizado com sucesso!')
+            } else {
+                await api.post('/users', { ...form, companyId: form.companyId || undefined })
+                toast.success('Usuário criado! Ele deverá trocar a senha no 1º acesso.')
+            }
             setShowForm(false)
-            setForm({ name: '', email: '', password: '', role: 'user', companyId: '' })
+            setEditingId(null)
+            setForm(initialForm)
             load()
         } catch (err) {
             toast.error(err.response?.data?.error || 'Erro ao salvar.')
         } finally { setSaving(false) }
+    }
+
+    function handleEdit(user) {
+        setEditingId(user.id)
+        setForm({
+            name: user.name || '',
+            email: user.email || '',
+            password: '',
+            role: user.role || 'user',
+            companyId: user.company_id || ''
+        })
+        setShowForm(true)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
+    async function handleToggle(user) {
+        try {
+            await api.patch(`/users/${user.id}`, { active: !user.active })
+            toast.success(`Usuário ${user.active ? 'desativado' : 'ativado'}.`)
+            load()
+        } catch { toast.error('Erro ao atualizar usuário.') }
     }
 
     async function handleDelete(id) {
@@ -55,14 +88,26 @@ export default function UsersPage() {
                     <h1 className={styles.title}>Usuários</h1>
                     <p className={styles.subtitle}>Gerencie os usuários com acesso ao sistema</p>
                 </div>
-                <Button variant="primary" onClick={() => setShowForm(v => !v)}>
-                    <Plus size={16} /> Novo Usuário
+                <Button variant="primary" onClick={() => {
+                    if (showForm && editingId) {
+                        setEditingId(null)
+                        setForm(initialForm)
+                    } else {
+                        setShowForm(!showForm)
+                        if (editingId) {
+                            setEditingId(null)
+                            setForm(initialForm)
+                        }
+                    }
+                }}>
+                    {showForm && editingId ? <Plus size={16} /> : (showForm ? <Trash2 size={16} /> : <Plus size={16} />)}
+                    {showForm && editingId ? ' Novo Usuário' : (showForm ? ' Fechar' : ' Novo Usuário')}
                 </Button>
             </div>
 
             {showForm && (
                 <div className={`${styles.formBox} glass`}>
-                    <h2 className={styles.formTitle}>Cadastrar Usuário</h2>
+                    <h2 className={styles.formTitle}>{editingId ? 'Editar Usuário' : 'Cadastrar Usuário'}</h2>
                     <form onSubmit={handleSave} className={styles.form}>
                         <div className={styles.formGrid}>
                             <div className={styles.field}>
@@ -74,8 +119,15 @@ export default function UsersPage() {
                                 <input type="email" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} placeholder="email@empresa.com" required />
                             </div>
                             <div className={styles.field}>
-                                <label>Senha *</label>
-                                <input type="password" value={form.password} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} placeholder="Mín. 8 caracteres" required minLength={8} />
+                                <label>Senha {editingId ? '(deixe em branco para manter)' : '*'}</label>
+                                <input
+                                    type="password"
+                                    value={form.password}
+                                    onChange={e => setForm(f => ({ ...f, password: e.target.value }))}
+                                    placeholder={editingId ? "********" : "Mín. 8 caracteres"}
+                                    required={!editingId}
+                                    minLength={8}
+                                />
                             </div>
                             <div className={styles.field}>
                                 <label>Perfil</label>
@@ -93,8 +145,12 @@ export default function UsersPage() {
                             </div>
                         </div>
                         <div className={styles.formActions}>
-                            <Button type="submit" variant="primary" loading={saving}>Salvar</Button>
-                            <Button type="button" variant="secondary" onClick={() => setShowForm(false)}>Cancelar</Button>
+                            <Button type="submit" variant="primary" loading={saving}>{editingId ? 'Atualizar' : 'Salvar'}</Button>
+                            <Button type="button" variant="secondary" onClick={() => {
+                                setShowForm(false)
+                                setEditingId(null)
+                                setForm(initialForm)
+                            }}>Cancelar</Button>
                         </div>
                     </form>
                 </div>
@@ -130,6 +186,12 @@ export default function UsersPage() {
                                     </td>
                                     <td>
                                         <div className={styles.actions}>
+                                            <button className={styles.actionBtn} onClick={() => handleEdit(u)} title="Editar">
+                                                <Edit2 size={15} />
+                                            </button>
+                                            <button className={styles.actionBtn} onClick={() => handleToggle(u)} title={u.active ? 'Desativar' : 'Ativar'}>
+                                                {u.active ? <XCircle size={15} /> : <CheckCircle size={15} />}
+                                            </button>
                                             <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDelete(u.id)} title="Remover">
                                                 <Trash2 size={15} />
                                             </button>

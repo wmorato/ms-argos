@@ -144,3 +144,17 @@
         box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
     }
 }
+
+@media (max-width: 480px) {
+    .page {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

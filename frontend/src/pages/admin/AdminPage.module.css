@@ -209,3 +209,51 @@
         transform: translateY(0);
     }
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pageHeader {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .formBox {
+        padding: 1.25rem;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .table th:nth-child(n+4),
+    .table td:nth-child(n+4) {
+        display: none;
+        /* Hide status, actions etc if too many */
+    }
+
+    /* Alternative: responsive table scroll is already there in .tableWrap */
+    /* But we can improve mobile table display */
+    .table th,
+    .table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .companyIcon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .table th:nth-child(n+3),
+    .table td:nth-child(n+3) {
+        display: none;
+        /* Hide even more columns on tiny screens */
+    }
+}

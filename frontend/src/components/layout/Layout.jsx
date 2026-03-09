@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import {
     Search, LayoutDashboard, Building2, Users,
-    ClipboardList, LogOut, Shield, CreditCard
+    ClipboardList, LogOut, Shield, CreditCard, Menu, X
 } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import styles from './Layout.module.css'
@@ -20,6 +21,7 @@ const adminItems = [
 export default function Layout({ children }) {
     const { user, logout, isAdmin } = useAuth()
     const navigate = useNavigate()
+    const [mobileOpen, setMobileOpen] = useState(false)
 
     function handleLogout() {
         logout()
@@ -30,9 +32,22 @@ export default function Layout({ children }) {
 
     return (
         <div className={styles.layout}>
-            {/* Sidebar */}
-            <aside className={`${styles.sidebar} glass`}>
+            {/* Mobile Header */}
+            <header className={styles.mobileHeader}>
                 <div className={styles.brand}>
+                    <div className={styles.brandIcon} style={{ width: 32, height: 32 }}>
+                        <Shield size={16} />
+                    </div>
+                    <span className={styles.brandName}>Argos Hub</span>
+                </div>
+                <button className={styles.menuToggle} onClick={() => setMobileOpen(!mobileOpen)}>
+                    {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+            </header>
+
+            {/* Sidebar / Drawer */}
+            <aside className={`${styles.sidebar} glass ${mobileOpen ? styles.mobileOpen : ''}`}>
+                <div className={`${styles.brand} ${styles.desktopOnly}`}>
                     <div className={styles.brandIcon}>
                         <Shield size={20} />
                     </div>
@@ -48,6 +63,7 @@ export default function Layout({ children }) {
                         <NavLink
                             key={to}
                             to={to}
+                            onClick={() => setMobileOpen(false)}
                             className={({ isActive }) =>
                                 `${styles.navItem} ${isActive ? styles.active : ''}`
                             }
@@ -64,6 +80,7 @@ export default function Layout({ children }) {
                                 <NavLink
                                     key={to}
                                     to={to}
+                                    onClick={() => setMobileOpen(false)}
                                     className={({ isActive }) =>
                                         `${styles.navItem} ${isActive ? styles.active : ''}`
                                     }
@@ -74,6 +91,7 @@ export default function Layout({ children }) {
                             ))}
                             <NavLink
                                 to="/payment"
+                                onClick={() => setMobileOpen(false)}
                                 className={({ isActive }) =>
                                     `${styles.navItem} ${isActive ? styles.active : ''}`
                                 }
@@ -96,6 +114,9 @@ export default function Layout({ children }) {
                     </button>
                 </div>
             </aside>
+
+            {/* Overlay for mobile */}
+            {mobileOpen && <div className={styles.overlay} onClick={() => setMobileOpen(false)} />}
 
             {/* Main Content */}
             <main className={styles.main}>

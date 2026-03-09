@@ -87,12 +87,12 @@ Para adicionar um novo CRM:
 ## Fase 1 — Status
 - [x] Setup base: React + Node.js + PostgreSQL + Docker
 - [x] Autenticação: login, JWT, bcrypt, troca de senha obrigatória
-- [x] Cadastro de empresa via painel admin
+- [x] Gestão de empresas (Cadastro, Edição, Ativação/Desativação, Máscara CNPJ)
 - [x] Página de pesquisa com CPF mascarado
 - [x] Adapter Pattern para CRMs (SGP TSMX implementado)
 - [x] Log de consultas LGPD-compliant
 - [x] Dashboard com estatísticas
-- [x] Gestão de usuários
+- [x] Gestão de usuários (Cadastro, Edição, Ativação/Desativação, Perfil, Vínculo com Empresa)
 - [x] Página de pagamento (placeholder)
 - [x] Nginx configurado
 - [x] Testes de health check

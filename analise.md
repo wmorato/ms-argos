@@ -14,10 +14,13 @@ Sistema de consulta centralizada de histórico de clientes para provedores de in
    - Padrão: `src/pages/{feature}/{Page}.jsx`.
 2. **UX de Pesquisa**: 
    - Mudança: De Cards expandidos para Modal.
-   - Benefício: Interface mais limpa e focada.
-   - Detalhes Técnicos: Uso de `createRoot` portal (virei a um estado local) para o Modal.
+   - Detalhes Técnicos: Uso de `createRoot` portal para o Modal.
+3. **Gestão de Usuários**:
+   - Implementada edição completa (Nome, Email, Senha, Perfil, Empresa).
+   - Adicionado controle de status (Ativo/Inativo) direto na listagem.
 
 ## Próximos Passos
 - Implementação real da página de pagamentos.
 - Integração com mais CRMs (Tsmx e SGP já mapeados via adapter).
 - Testes automatizados de UI (Playwright).
+- Implementação de auditoria (Logs detalhados de quem alterou o quê).

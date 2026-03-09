@@ -13,28 +13,28 @@ const QUICK_TESTS = [
 
 export default function SearchPage() {
     const [digits, setDigits] = useState('')
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(true)
     const [inputVal, setInputVal] = useState('')
     const [loading, setLoading] = useState(false)
     const [results, setResults] = useState(null)
     const [selectedResult, setSelectedResult] = useState(null)
-    const timerRef = useRef(null)
+    // const timerRef = useRef(null) // Removendo timer de ofuscacao
 
     // Handlers
     function handleChange(e) {
         const raw = digitsOnly(e.target.value).substring(0, 11)
         setDigits(raw)
-        setInputVal(formatCpf(raw))
-        if (!visible) {
-            clearTimeout(timerRef.current)
-            timerRef.current = setTimeout(() => {
-                if (!visible) setInputVal(maskCpf(raw))
-            }, 1200)
-        }
+        setInputVal(visible ? formatCpf(raw) : maskCpf(raw))
     }
 
-    function handleFocus() { if (!visible) setInputVal(formatCpf(digits)) }
-    function handleBlur() { if (!visible && digits) setInputVal(maskCpf(digits)) }
+    function handleFocus() {
+        if (!visible) setInputVal(formatCpf(digits))
+    }
+
+    function handleBlur() {
+        if (!visible && digits) setInputVal(maskCpf(digits))
+    }
+
     function toggleVisible() {
         setVisible(v => {
             const next = !v
@@ -42,6 +42,7 @@ export default function SearchPage() {
             return next
         })
     }
+
     function fillQuick(cpf) {
         setDigits(cpf)
         setInputVal(visible ? formatCpf(cpf) : maskCpf(cpf))
