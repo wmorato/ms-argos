@@ -14,14 +14,13 @@
 - **Testes**: health check com 9 validações incrementais — 9/9 passando
 - **Secrets**: `/var/www/secrets/ms-argos.env` criado com todas as variáveis
 
-## 2026-03-09 — Refatoração Frontend (UX) e Estrutura de Pastas
+## 2026-03-09 — Melhorias Administrativas, UX Financeira e Publicação GitHub
 
-**Tarefa:** Organizar páginas em pastas (/pages/modulo/*) e simplificar a visualização de resultados de pesquisa conforme solicitação.
+**Tarefa:** Implementar funcionalidade de edição, máscara de CNPJ e publicar projeto no GitHub.
 
 **O que foi feito:**
-- **Reorganização Estrutural**: Todas as páginas movidas para subpastas (`src/pages/login/`, `src/pages/dashboard/`, etc.), melhorando a escalabilidade.
-- **Nova UX de Pesquisa**: 
-  - Cards de resultado simplificados (apenas Provedor e Status).
-  - Implementado **ResultModal**: Popup com detalhes completos ao clicar no card.
-  - Removidos links para boletos de pagamento (mantida apenas a listagem informativa).
-- **Refatoração de Caminhos**: Atualizados todos os `imports` e refinado o build do frontend para evitar conflitos de cache após a movimentação.
+- **Edição de Empresas**: Adicionada funcionalidade de editar dados técnicos (CNPJ, Token, URL Base) para administradores, com botões de ação condicionais por perfil.
+- **Máscara de CNPJ**: Implementada máscara dinâmica (`00.000.000/0001-00`) durante a digitação e exibição na listagem.
+- **UX Financeira**: Redesenhado o modal de detalhes da pesquisa com dashboard de métricas (Contratos/Boletos/Saldo) e listagem expansível, seguindo o padrão modern dark.
+- **Robustez Backend**: Ativado `trust proxy` para correta captura de IPs e adicionado controle de cache no backend para evitar dados desatualizados no frontend.
+- **Gestão de Git**: Criado `.gitignore` robusto, inicializado repositório local e publicado no GitHub: `https://github.com/wmorato/ms-argos`.
