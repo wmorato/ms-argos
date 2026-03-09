@@ -1,0 +1,591 @@
+﻿{
+    "msg":  "Contrato(s) Localizado(s)",
+    "contratos":  [
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/GIwm41qDudFyKYbs/fcdd3375db10902f3e0f5ca985d16156/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "",
+                          "dataCadastro":  "02/05/2024 14:47:35",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_GAMER_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  1,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  1,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_GAMER_FIDELIDADE",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "natan2020",
+                          "dataAlteracao":  "29/10/2024 13:14:33",
+                          "servico_login":  "natan2024",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  2868,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "icaus2867",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/PxfXpxY2IOLm9nIJ/4c77ce0f83a97832273a64dbd6925926/2026",
+                          "contratoStatus":  4,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "Financeiro",
+                          "dataCadastro":  "02/05/2024 14:44:05",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_GAMER_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  25,
+                          "servico_vlan":  "None",
+                          "cobIsento":  0.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  1,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Suspenso",
+                          "contratoCentralLogin":  "icaus2867",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  2,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  339.8,
+                          "planointernet":  "PLANO_GAMER_FIDELIDADE",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "78:D7:52:AD:EB:67",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "centralicarus",
+                          "dataAlteracao":  "23/09/2025 09:02:11",
+                          "servico_login":  "centralicarus",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  2867,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/TRlhHAfyGE3HJm4w/111302d5101b63c371cd4b98c051c776/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "Administrativo",
+                          "dataCadastro":  "02/05/2024 15:02:05",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_GAMER_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  1,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  2,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_GAMER_FIDELIDADE",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "20:57:AF:0E:2E:76",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "salaikr1010",
+                          "dataAlteracao":  "22/07/2025 21:48:02",
+                          "servico_login":  "salaikr2.vsjcto18",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  2870,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "e1gxp2yg",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/NlR1a1an6L0uu9Pw/b34f2ae5b8d9257bc5ad5c12a6477666/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "",
+                          "dataCadastro":  "07/06/2024 18:25:37",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_TOP_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  1,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  2,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "natan20",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_TOP_FIDELIDADE",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "natan20",
+                          "dataAlteracao":  "30/04/2025 16:33:26",
+                          "servico_login":  "natan20",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  2979,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "Static Switch",
+                          "contratoCentralSenha":  "testeerique001",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/udrU+nf8DppzAKu6/e3fa09903a1af4948c7e2ac6123911f1/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "",
+                          "dataCadastro":  "02/11/2024 13:19:02",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_TOP_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  1,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  1,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "testeerique001",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_TOP_FIDELIDADE",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "20:57:AF:08:C1:A0",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "central1010",
+                          "dataAlteracao":  "01/02/2025 10:36:37",
+                          "servico_login":  "central",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  3454,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "nnxckgbl",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/2FaaZiyU6NryRLh8/774b3350a0a2a38256cf22e116053afe/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "",
+                          "dataCadastro":  "25/07/2024 21:36:32",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_TOP",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  1,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  1,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "testecartao",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_TOP",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "20:57:AF:16:24:3D",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "vadn",
+                          "dataAlteracao":  "09/09/2024 23:37:58",
+                          "servico_login":  "ssssssssssssssss",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  3123,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "testeerique002",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/udVIzqLNEfJr18uC/7681074038483402779fbb416a88d1e0/2026",
+                          "contratoStatus":  3,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "EQPTO RETIRADO",
+                          "dataCadastro":  "02/11/2024 13:20:18",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_TOP_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  1,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  2,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Cancelado",
+                          "contratoCentralLogin":  "testeerique002",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_TOP_FIDELIDADE",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "kkk",
+                          "dataAlteracao":  "10/09/2025 10:17:40",
+                          "servico_login":  "davitrombini",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  3455,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "icarusnet1010",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/6sHXJrC9eCqZy58=/ead60e9c8d3953b3d93a92cbe1276fc1/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "Administrativo",
+                          "dataCadastro":  "26/03/2020 00:00:00",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_GAMER",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  25,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  2,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "icarusnet",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "servico_ip":  "168.227.36.65",
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_GAMER",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "icarus1010",
+                          "dataAlteracao":  "09/04/2025 09:59:43",
+                          "endereco_numero":  3020,
+                          "servico_login":  "icaruscentral",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  296,
+                          "endereco_ll":  "-23.962418270297892, -46.35860326822734"
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "",
+                          "endereco_complemento":  "MORRO DO JOSE MENINO",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/ClLe3DszXw20zfTz/b951b225c544f8dfe573a7d7176d4ee0/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "NOVA INSTALACAO",
+                          "dataCadastro":  "22/12/2023 09:28:28",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_GAMER_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  1,
+                          "servico_vlan":  "None",
+                          "cobIsento":  100.0,
+                          "cpfCnpj":  "310.289.248-52",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "CARLOS ALBERTO CURADO",
+                          "contratoStatusModo":  2,
+                          "telefones":  [
+                                            "(13) 99129-2148"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  0,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  3020,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_GAMER_FIDELIDADE",
+                          "clienteId":  296,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+                                         "icarusnet1010@gmail.com"
+                                     ],
+                          "razaoSocial":  "ICARUS NET LTDA",
+                          "servico_mac":  "",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-710",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "login",
+                          "dataAlteracao":  "14/04/2025 13:29:44",
+                          "servico_login":  "login",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  1965,
+                          "endereco_ll":  "-23.9676621,-46.3567069"
+                      }
+                  ]
+}

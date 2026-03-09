@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGP - Pesquisa de Histórico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Overlay de Login -->
+    <div id="login-overlay" class="overlay hidden">
+        <div class="login-card glass-panel">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>Hub de Empresas</h1>
+            </div>
+            <p>Pesquisa Centralizada de Histórico</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" placeholder="Digite seu usuário" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn-primary">Acessar Sistema</button>
+                <div id="login-error" class="error-text hidden">Usuário ou senha incorretos.</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Principal -->
+    <div id="dashboard" class="dashboard">
+        <header class="glass-header">
+            <div class="header-content">
+                <div class="logo-container-small">
+                    <div class="logo-icon-small"></div>
+                    <h2>Portal de Pesquisa</h2>
+                </div>
+                <div class="user-profile">
+                    <span class="avatar">A</span>
+                    <span class="username-display">Admin</span>
+                    <button id="logout-btn" class="btn-secondary">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <aside class="sidebar glass-panel">
+                <h3>Testes Rápidos</h3>
+                <p>Clique para preencher</p>
+                <ul class="quick-fill-list">
+                    <li class="quick-fill-item" data-cpf="31028924852">310.***.***-** (Icarus s/ fat)</li>
+                    <li class="quick-fill-item" data-cpf="32289392863">322.***.***-** (Icarus c/ fat)</li>
+                    <li class="quick-fill-item" data-cpf="57074067865">570.***.***-**</li>
+                    <li class="quick-fill-item" data-cpf="37245167893">372.***.***-**</li>
+                    <li class="quick-fill-item" data-cpf="36452285866">364.***.***-**</li>
+                    <li class="quick-fill-item" data-cpf="35086892805">350.***.***-**</li>
+                    <li class="quick-fill-item" data-cpf="38984646873">389.***.***-**</li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <div class="search-section glass-panel">
+                    <h3>Nova Pesquisa</h3>
+                    <p>Consulte o histórico do cliente em nossa rede de provedores conveniados.</p>
+
+                    <form id="search-form" class="search-form">
+                        <div class="search-input-wrapper" style="position: relative; flex: 1;">
+                            <input type="text" id="document-input"
+                                placeholder="Digite o CPF ou CNPJ (ex: 310.***.***-**)" required>
+                            <button type="button" id="toggle-cpf-btn" class="btn-toggle-eye">👁️</button>
+                        </div>
+                        <button type="submit" id="search-btn" class="btn-primary btn-search">
+                            <span class="search-text">Pesquisar</span>
+                            <div class="spinner hidden"></div>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="results-container" class="results-container hidden">
+                    <div class="results-header">
+                        <h3>Resultados Encontrados</h3>
+                        <p id="search-query-display">Mostrando resultados para: <strong></strong></p>
+                    </div>
+
+                    <div id="results-grid" class="results-grid">
+                        <!-- Cards de resultado serão inseridos aqui pelo JS -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="credentials.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

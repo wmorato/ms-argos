@@ -1,0 +1,29 @@
+.boletos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.boletos-table th,
+.boletos-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.boletos-table th {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.link-boleto {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-boleto:hover {
+    text-decoration: underline;
+}

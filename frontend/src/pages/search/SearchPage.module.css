@@ -1,0 +1,591 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header {
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--text-2);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+.layout {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+/* Quick Panel */
+.quickPanel {
+    width: 230px;
+    flex-shrink: 0;
+    padding: 1.5rem;
+}
+
+.quickTitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.quickSub {
+    font-size: 0.78rem;
+    color: var(--text-2);
+    margin-bottom: 1rem;
+}
+
+.quickList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.quickItem {
+    padding: 0.65rem 0.85rem;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: var(--text-2);
+    transition: all var(--transition);
+}
+
+.quickItem:hover {
+    border-color: var(--primary);
+    color: var(--text-1);
+    background: rgba(99, 102, 241, 0.08);
+}
+
+/* Content */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* Search box */
+.searchBox {
+    padding: 1.75rem;
+}
+
+.searchTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.searchSub {
+    color: var(--text-2);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.inputWrap {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-3);
+    pointer-events: none;
+}
+
+.input {
+    width: 100%;
+    padding: 0.85rem 3rem 0.85rem 2.75rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-1);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.eyeBtn {
+    position: absolute;
+    right: 0.85rem;
+    background: none;
+    border: none;
+    color: var(--text-3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    transition: color var(--transition);
+}
+
+.eyeBtn:hover {
+    color: var(--text-1);
+}
+
+/* Results */
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resultsHeader {}
+
+.resultsTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.resultsQuery {
+    font-size: 0.875rem;
+    color: var(--text-2);
+}
+
+.queryHighlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+}
+
+/* Result Card */
+.card {
+    padding: 1.5rem;
+    animation: slideUp 0.35s ease-out;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.statusOk {
+    border-top: 3px solid var(--success) !important;
+}
+
+.statusPending {
+    border-top: 3px solid var(--danger) !important;
+}
+
+.statusError {
+    border-top: 3px solid var(--warning) !important;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.providerName {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.statusBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.65rem;
+    border-radius: 100px;
+}
+
+.statusOk.statusBadge {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--success);
+}
+
+.statusPending.statusBadge {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--danger);
+}
+
+.statusError.statusBadge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--warning);
+}
+
+.cardMessage {
+    font-size: 0.9rem;
+    color: var(--text-2);
+    margin-bottom: 0.75rem;
+}
+
+.errorNote {
+    font-size: 0.8rem;
+    color: var(--warning);
+    margin-top: 0.5rem;
+}
+
+.address {
+    font-size: 0.85rem;
+    color: var(--text-2);
+    margin-bottom: 0.75rem;
+}
+
+.address strong {
+    color: var(--text-1);
+}
+
+.debtAmount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--danger);
+    margin: 0.75rem 0;
+    letter-spacing: -0.02em;
+}
+
+.toggleBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    color: var(--primary);
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    margin-bottom: 0.75rem;
+}
+
+.toggleBtn:hover {
+    background: rgba(99, 102, 241, 0.18);
+}
+
+.invoiceTable {
+    overflow-x: auto;
+}
+
+.invoiceTable table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+}
+
+.invoiceTable th {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-3);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.invoiceTable td {
+    padding: 0.5rem 0.75rem;
+    color: var(--text-2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.boletoLink {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: color var(--transition);
+}
+
+.boletoLink:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.okActions {
+    margin-top: 1rem;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modalContent {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    max-height: 95vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modalHeader {
+    padding: 1.5rem 1.75rem;
+    border-bottom: 1px solid #27272a;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.modalProviderInfo h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fafafa;
+}
+
+.modalAddress {
+    font-size: 0.85rem;
+    color: #a1a1aa;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: #a1a1aa;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.closeBtn:hover {
+    background: #27272a;
+    color: #fafafa;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    border: 1px solid transparent;
+}
+
+.badgeSuccess {
+    background-color: rgba(6, 78, 59, 0.2);
+    color: #6ee7b7;
+    border-color: #064e3b;
+}
+
+.badgeDanger {
+    background-color: rgba(69, 10, 10, 0.2);
+    color: #fca5a5;
+    border-color: #7f1d1d;
+}
+
+.badgeError {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #fcd34d;
+    border-color: #92400e;
+}
+
+.modalBody {
+    padding: 1.5rem 1.75rem;
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.metricItem {
+    background-color: rgba(39, 39, 42, 0.4);
+    border: 1px solid #27272a;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.metricLabel {
+    display: block;
+    font-size: 0.7rem;
+    color: #a1a1aa;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.metricValue {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fafafa;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #27272a;
+}
+
+.totalInfo .totalLabel {
+    display: block;
+    font-size: 0.85rem;
+    color: #a1a1aa;
+}
+
+.totalInfo .totalAmount {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fafafa;
+    line-height: 1.2;
+}
+
+.totalAmount.alert {
+    color: #ef4444;
+}
+
+/* Expandable Section */
+.expandableSection {
+    margin-top: 1.5rem;
+    border: 1px solid #27272a;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modalInvoiceTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.modalInvoiceTable th {
+    background-color: #1c1c1f;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    color: #a1a1aa;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.modalInvoiceTable td {
+    padding: 0.85rem 1rem;
+    border-top: 1px solid #27272a;
+    color: #fafafa;
+}
+
+.modalInvoiceTable tr:hover {
+    background-color: rgba(39, 39, 42, 0.2);
+}
+
+.payLink {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.payLink:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .quickPanel {
+        width: 100%;
+    }
+}

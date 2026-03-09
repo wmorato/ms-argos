@@ -1,0 +1,89 @@
+services:
+
+  # ========== PostgreSQL ==========
+  argos-postgres:
+    image: postgres:16-alpine
+    container_name: argos-postgres
+    restart: unless-stopped
+    env_file:
+      - /var/www/secrets/ms-argos.env
+    environment:
+      POSTGRES_DB: ms_argos
+      POSTGRES_USER: u_bd_ms_argos
+      POSTGRES_PASSWORD: "@rgos@d@tos!"
+    volumes:
+      - argos_pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5441:5432"
+    networks:
+      - argos-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U u_bd_ms_argos -d ms_argos"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ========== Backend ==========
+  argos-backend:
+    build:
+      context: ../backend
+      dockerfile: ../docker/Dockerfile.backend
+    container_name: argos-backend
+    restart: unless-stopped
+    env_file:
+      - /var/www/secrets/ms-argos.env
+    environment:
+      DB_HOST: argos-postgres
+    ports:
+      - "127.0.0.1:5040:5040"
+    depends_on:
+      argos-postgres:
+        condition: service_healthy
+    networks:
+      - argos-net
+    volumes:
+      - argos_logs:/app/logs
+
+  # ========== Frontend ==========
+  argos-frontend:
+    image: argos-frontend-img:latest
+    build:
+      context: ../frontend
+      dockerfile: ../docker/Dockerfile.frontend
+      args:
+        VITE_API_URL: /argos/api
+        VITE_APP_NAME: "Argos Hub"
+    container_name: argos-frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5041:80"
+    networks:
+      - argos-net
+
+  # ========== Backup PostgreSQL (a cada 1h) ==========
+  argos-backup:
+    image: postgres:16-alpine
+    container_name: argos-backup
+    restart: unless-stopped
+    environment:
+      PGPASSWORD: "@rgos@d@tos!"
+      DB_HOST: argos-postgres
+      DB_NAME: ms_argos
+      DB_USER: u_bd_ms_argos
+    volumes:
+      - /var/www/database:/backup
+      - ./backup.sh:/backup.sh:ro
+    depends_on:
+      argos-postgres:
+        condition: service_healthy
+    networks:
+      - argos-net
+    entrypoint: ["sh", "-c", "while true; do sleep 3600; sh /backup.sh; done"]
+
+volumes:
+  argos_pgdata:
+  argos_logs:
+
+networks:
+  argos-net:
+    driver: bridge

@@ -1,0 +1,43 @@
+﻿{
+    "status":  1,
+    "razaoSocial":  "ALDO SEVERO DOS SANTOS JÃNIOR",
+    "links":  [
+                  {
+                      "codigopix":  "00020101021226940014BR.GOV.BCB.PIX2572qrcodespix.sejaefi.com.br/bolix/v2/cobv/024c0fa63034421586ba2e2390dd99245204000053039865802BR5905EFISA6008SAOPAULO62070503***6304CEC6",
+                      "desconto_vencimento":  286.0,
+                      "vencimento":  "2026-03-07",
+                      "link_cobranca":  "https://icarusnet.sgp.tsmx.com.br/public/cobranca/108758-YPO07M4YAG/",
+                      "link":  "https://icarusnet.sgp.tsmx.com.br/boleto/108758-YPO07M4YAG/",
+                      "vencimento_original":  "2026-01-20",
+                      "id":  100497,
+                      "valor_original":  286.0,
+                      "multa":  0.0,
+                      "fatura":  108758,
+                      "link_pix_html":  "https://icarusnet.sgp.tsmx.com.br/pix/108758-YPO07M4YAG/html/",
+                      "juros":  0.0,
+                      "valor":  286.0,
+                      "linhadigitavel":  "36490.00043 00042.661603 00000.709972 1 00000000028600"
+                  },
+                  {
+                      "codigopix":  "00020101021226940014BR.GOV.BCB.PIX2572qrcodespix.sejaefi.com.br/bolix/v2/cobv/6bebce34c2514ff4b2a2a75a82f1c3bb5204000053039865802BR5905EFISA6008SAOPAULO62070503***6304AA2D",
+                      "desconto_vencimento":  149.85,
+                      "vencimento":  "2026-03-07",
+                      "link_cobranca":  "https://icarusnet.sgp.tsmx.com.br/public/cobranca/108757-Y1SJP9WUEJ/",
+                      "link":  "https://icarusnet.sgp.tsmx.com.br/boleto/108757-Y1SJP9WUEJ/",
+                      "vencimento_original":  "2026-01-20",
+                      "id":  100496,
+                      "valor_original":  149.85,
+                      "multa":  0.0,
+                      "fatura":  108757,
+                      "link_pix_html":  "https://icarusnet.sgp.tsmx.com.br/pix/108757-Y1SJP9WUEJ/html/",
+                      "juros":  0.0,
+                      "valor":  149.85,
+                      "linhadigitavel":  "36490.00068 00042.661603 00000.709964 3 00000000014985"
+                  }
+              ],
+    "cpfCnpj":  "322.893.928-63",
+    "link_cobranca":  "https://icarusnet.sgp.tsmx.com.br/public/cobranca/108757-Y1SJP9WUEJ/",
+    "link":  "https://icarusnet.sgp.tsmx.com.br/boleto/108757-Y1SJP9WUEJ/",
+    "msg":  "",
+    "contratoId":  4124
+}

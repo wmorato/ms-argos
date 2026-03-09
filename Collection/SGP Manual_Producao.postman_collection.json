@@ -1,0 +1,560 @@
+{
+  "info": {
+    "_postman_id": "f20a7b3b-a377-452e-a81d-7227c02d43e9",
+    "name": "SGP Manual",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22991804"
+  },
+  "item": [
+    {
+      "name": "Consulta Cliente",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "type": "text",
+              "key": "token",
+              "value": "5188d43c-708f-4bac-b0ae-7f30d6e45eaf"
+            },
+            {
+              "type": "text",
+              "key": "app",
+              "value": "chatbot"
+            },
+            {
+              "type": "text",
+              "key": "cpfcnpj",
+              "value": "32289392863"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://icarusnet.sgp.tsmx.com.br/api/ura/consultacliente/",
+          "protocol": "https",
+          "host": [
+            "icarusnet",
+            "sgp",
+            "tsmx",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "ura",
+            "consultacliente",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consulta Cliente CallCenter",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "type": "text",
+              "key": "token",
+              "value": "a4dd17df-995d-4f68-88cf-b4b1c0dd82e5"
+            },
+            {
+              "type": "text",
+              "key": "app",
+              "value": "appicarus"
+            },
+            {
+              "type": "text",
+              "key": "cpfcnpj",
+              "value": "31028924852"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://icarusnet.sgplocal.com.br/api/ura/consultacliente/",
+          "protocol": "https",
+          "host": [
+            "icarusnet",
+            "sgplocal",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "ura",
+            "consultacliente",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar segunda via de boleto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "type": "text",
+              "key": "token",
+              "value": "5188d43c-708f-4bac-b0ae-7f30d6e45eaf"
+            },
+            {
+              "type": "text",
+              "key": "app",
+              "value": "chatbot"
+            },
+            {
+              "type": "text",
+              "key": "contrato",
+              "value": "296"
+            },
+            {
+              "key": "cpfcnpj",
+              "value": "280.188.758-71",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://icarusnet.sgp.tsmx.com.br/api/ura/fatura2via/",
+          "protocol": "https",
+          "host": [
+            "icarusnet",
+            "sgp",
+            "tsmx",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "ura",
+            "fatura2via",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Fatura2via via Central",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "token",
+              "value": "5188d43c-708f-4bac-b0ae-7f30d6e45eaf",
+              "type": "text"
+            },
+            {
+              "key": "app",
+              "value": "chatbot",
+              "type": "text"
+            },
+            {
+              "type": "text",
+              "key": "cpfcnpj",
+              "value": "310.289.248-52"
+            },
+            {
+              "type": "text",
+              "key": "senha",
+              "value": "icarusnet1010"
+            },
+            {
+              "type": "text",
+              "key": "contrato",
+              "value": "296"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://icarusnet.sgp.tsmx.com.br/api/central/fatura2via/",
+          "protocol": "https",
+          "host": [
+            "icarusnet",
+            "sgp",
+            "tsmx",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "central",
+            "fatura2via",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Fatura2via via Central",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "token",
+                  "value": "5188d43c-708f-4bac-b0ae-7f30d6e45eaf",
+                  "type": "text"
+                },
+                {
+                  "key": "app",
+                  "value": "ChatBot",
+                  "type": "text"
+                },
+                {
+                  "type": "text",
+                  "key": "cpfcnpj",
+                  "value": "310.289.248-52"
+                },
+                {
+                  "type": "text",
+                  "key": "senha",
+                  "value": "icarusnet1010"
+                },
+                {
+                  "type": "text",
+                  "key": "contrato",
+                  "value": "296"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://icarusnet.sgp.tsmx.com.br/api/central/fatura2via/",
+              "protocol": "https",
+              "host": [
+                "icarusnet",
+                "sgp",
+                "tsmx",
+                "com",
+                "br"
+              ],
+              "path": [
+                "api",
+                "central",
+                "fatura2via",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "html",
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.18.0"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 13 Mar 2024 14:17:09 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "4"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Cookie, Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "500\n"
+        }
+      ]
+    },
+    {
+      "name": "Fatura2via via URA",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "token",
+              "type": "text",
+              "value": "{{token}}"
+            },
+            {
+              "key": "app",
+              "value": "chatbot",
+              "type": "text"
+            },
+            {
+              "type": "text",
+              "key": "contrato",
+              "value": "296"
+            },
+            {
+              "type": "text",
+              "key": "cpfcnpj",
+              "value": "310.289.248-52",
+              "disabled": true
+            },
+            {
+              "type": "text",
+              "key": "senha",
+              "value": "icarusnet1010",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://icarusnet.sgp.tsmx.com.br/api/ura/fatura2via/",
+          "protocol": "https",
+          "host": [
+            "icarusnet",
+            "sgp",
+            "tsmx",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "ura",
+            "fatura2via",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar Disponibilidade",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "token",
+              "value": "5188d43c-708f-4bac-b0ae-7f30d6e45eaf",
+              "type": "text"
+            },
+            {
+              "key": "app",
+              "value": "chatbot",
+              "type": "text"
+            },
+            {
+              "type": "text",
+              "key": "cpfcnpj",
+              "value": "310.289.248-52",
+              "disabled": true
+            },
+            {
+              "type": "text",
+              "key": "senha",
+              "value": "icarusnet1010",
+              "disabled": true
+            },
+            {
+              "type": "text",
+              "key": "contrato",
+              "value": "296",
+              "disabled": true
+            },
+            {
+              "key": "cep",
+              "value": "11347150",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://icarusnet.sgp.tsmx.com.br/api/ura/viabilidade/",
+          "protocol": "https",
+          "host": [
+            "icarusnet",
+            "sgp",
+            "tsmx",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "ura",
+            "viabilidade",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar Disponibilidade Copy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "token",
+              "value": "5188d43c-708f-4bac-b0ae-7f30d6e45eaf",
+              "type": "text"
+            },
+            {
+              "key": "app",
+              "value": "chatbot",
+              "type": "text"
+            },
+            {
+              "type": "text",
+              "key": "cpfcnpj",
+              "value": "310.289.248-52",
+              "disabled": true
+            },
+            {
+              "type": "text",
+              "key": "senha",
+              "value": "icarusnet1010",
+              "disabled": true
+            },
+            {
+              "type": "text",
+              "key": "contrato",
+              "value": "296",
+              "disabled": true
+            },
+            {
+              "key": "cep",
+              "value": "11347150",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://icarusnet.sgp.tsmx.com.br/api/ura/viabilidade/",
+          "protocol": "https",
+          "host": [
+            "icarusnet",
+            "sgp",
+            "tsmx",
+            "com",
+            "br"
+          ],
+          "path": [
+            "api",
+            "ura",
+            "viabilidade",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000/centralfatura2via",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"token\":\"5188d43c-708f-4bac-b0ae-7f30d6e45eaf\",\r\n\"app\":\"chatbot\",\r\n\"cpfcnpj\":\"310.289.248-52\",\r\n\"senha\":\"icarusnet1010\",\r\n\"contrato\":\"296\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/centralfatura2via",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "centralfatura2via"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3000 uraconsultacliente",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"token\":\"5188d43c-708f-4bac-b0ae-7f30d6e45eaf\",\r\n\"app\":\"chatbot\",\r\n\"cpfcnpj\":\"310.289.248-52\",\r\n\"url\":\"/ura/consultacliente\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:30000/ura/consultacliente",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "30000",
+          "path": [
+            "ura",
+            "consultacliente"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ngrok Server 3000",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"token\":\"5188d43c-708f-4bac-b0ae-7f30d6e45eaf\",\r\n\"app\":\"chatbot\",\r\n\"cpfcnpj\":\"310.289.248-52\",\r\n\"senha\":\"icarusnet1010\",\r\n\"contrato\":\"296\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://ba1b-143-202-67-163.ngrok-free.app/centralfatura2via",
+          "protocol": "https",
+          "host": [
+            "ba1b-143-202-67-163",
+            "ngrok-free",
+            "app"
+          ],
+          "path": [
+            "centralfatura2via"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

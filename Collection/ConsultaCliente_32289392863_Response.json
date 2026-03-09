@@ -1,0 +1,139 @@
+﻿{
+    "msg":  "Contrato(s) Localizado(s)",
+    "contratos":  [
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "32289392863b",
+                          "endereco_complemento":  "CASA 4",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/nC85roX69gkKYVup/f764d0c75cfdc2b20a7ebb47f8a1f26c/2026",
+                          "contratoStatus":  4,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "EM NEGOCIACAO",
+                          "dataCadastro":  "16/07/2025 14:57:50",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_TOP_FIDELIDADE",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  10,
+                          "servico_vlan":  "None",
+                          "cobIsento":  0.0,
+                          "cpfCnpj":  "322.893.928-63",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "RUA PROJETADA",
+                          "contratoStatusModo":  2,
+                          "telefones":  [
+                                            "(13) 99629-3145",
+                                            "(13) 97423-6175",
+                                            "(13) 99110-8571"
+                                        ],
+                          "contratoStatusDisplay":  "Suspenso",
+                          "contratoCentralLogin":  "32289392863b",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  2,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  76,
+                          "contratoValorAberto":  435.85,
+                          "planointernet":  "PLANO_TOP_FIDELIDADE",
+                          "clienteId":  625,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+
+                                     ],
+                          "razaoSocial":  "ALDO SEVERO DOS SANTOS JÃNIOR",
+                          "servico_mac":  "C0:25:2F:20:C9:A2",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-770",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "aldosevero1010",
+                          "dataAlteracao":  "18/02/2026 09:29:50",
+                          "servico_login":  "aldosevero.vbcto21",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  4124,
+                          "endereco_ll":  ""
+                      },
+                      {
+                          "telefones_cargos":  [
+
+                                               ],
+                          "cobPermuta":  false,
+                          "servico_tipo_conexao":  "PPPoE",
+                          "contratoCentralSenha":  "aldo1010",
+                          "endereco_complemento":  "CASA 3",
+                          "popNome":  "SANTOS/SP",
+                          "link_quitacao":  "https://icarusnet.sgp.tsmx.com.br/api/declaracao/quitacao/7Iyb8V9CVKLsbG4=/675761be9e65f1a11e3e4847bee44eeb/2026",
+                          "contratoStatus":  1,
+                          "servico_wifi_channel":  "auto",
+                          "motivo_status":  "Financeiro",
+                          "dataCadastro":  "11/02/2021 00:00:00",
+                          "endereco_uf":  "SP",
+                          "servico_plano":  "PLANO_TOP",
+                          "endereco_pontoreferencia":  null,
+                          "cobVencimento":  10,
+                          "servico_vlan":  "None",
+                          "cobIsento":  0.0,
+                          "cpfCnpj":  "322.893.928-63",
+                          "servico_mac2":  "",
+                          "endereco_logradouro":  "RUA PROJETADA",
+                          "contratoStatusModo":  1,
+                          "telefones":  [
+                                            "(13) 99629-3145",
+                                            "(13) 97423-6175",
+                                            "(13) 99110-8571"
+                                        ],
+                          "contratoStatusDisplay":  "Ativo",
+                          "contratoCentralLogin":  "aldo.vbcto21",
+                          "tags":  [
+
+                                   ],
+                          "contratoTitulosAReceber":  12,
+                          "servico_wifi_ssid_5":  "",
+                          "servico_grupo":  "fibra",
+                          "endereco_numero":  76,
+                          "contratoValorAberto":  0.0,
+                          "planointernet":  "PLANO_TOP",
+                          "clienteId":  625,
+                          "endereco_bairro":  "JOSE MENINO",
+                          "emails":  [
+
+                                     ],
+                          "razaoSocial":  "ALDO SEVERO DOS SANTOS JÃNIOR",
+                          "servico_mac":  "00:EB:D8:43:9A:DA",
+                          "fidelidade":  {
+
+                                         },
+                          "servico_wifi_password_5":  "",
+                          "popId":  1,
+                          "endereco_cep":  "11065-770",
+                          "promessasPagamentoMes":  0,
+                          "servico_wifi_password":  "",
+                          "endereco_cidade":  "SANTOS",
+                          "servico_senha":  "aldo1010",
+                          "dataAlteracao":  "27/02/2026 22:32:04",
+                          "servico_login":  "aldo.vbcto21",
+                          "anotacoes":  [
+
+                                        ],
+                          "servico_wifi_channel_5":  "auto",
+                          "servico_wifi_ssid":  "",
+                          "contratoId":  625,
+                          "endereco_ll":  "-23.9498249,-46.377175"
+                      }
+                  ]
+}

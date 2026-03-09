@@ -1,0 +1,67 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.4rem 1.8rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.iconWrap {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.primary {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--primary);
+}
+
+.success {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+}
+
+.danger {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+}
+
+.warning {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--warning);
+}
+
+.secondary {
+    background: rgba(14, 165, 233, 0.2);
+    color: var(--secondary);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.label {
+    font-size: 0.78rem;
+    color: var(--text-2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-1);
+    line-height: 1;
+}

@@ -1,0 +1,211 @@
+/* Compartilhado entre CompaniesPage e UsersPage */
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pageHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--text-2);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+/* Form */
+.formBox {
+    padding: 2rem;
+    animation: slideDown 0.3s ease;
+}
+
+.formTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-2);
+}
+
+.field input,
+.field select {
+    padding: 0.7rem 0.9rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-1);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.field select option {
+    background: var(--bg-2);
+}
+
+.formActions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Table */
+.tableWrap {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+    font-weight: 700;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.table td {
+    padding: 1rem 1.2rem;
+    font-size: 0.875rem;
+    color: var(--text-2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    vertical-align: middle;
+}
+
+.table tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.mono {
+    font-family: monospace;
+    font-size: 0.82rem;
+}
+
+.companyCell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.companyIcon {
+    width: 32px;
+    height: 32px;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.companyName {
+    font-weight: 600;
+    color: var(--text-1);
+    font-size: 0.9rem;
+}
+
+.companySite {
+    font-size: 0.75rem;
+    color: var(--text-3);
+}
+
+.actions {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.actionBtn {
+    background: none;
+    border: 1px solid var(--glass-border);
+    color: var(--text-3);
+    cursor: pointer;
+    padding: 0.4rem 0.55rem;
+    border-radius: 6px;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.actionBtn:hover {
+    color: var(--text-1);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.actionBtn.danger:hover {
+    color: var(--danger);
+    border-color: rgba(239, 68, 68, 0.4);
+}
+
+.loadingMsg,
+.empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-3);
+    font-size: 0.9rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,632 @@
+{
+  "info": {
+    "_postman_id": "27657cb8-af0a-4efe-a940-f1cfa0f0d84c",
+    "name": "Doc Api – SGP",
+    "description": "# Apresentação\r\nDocumentação para utilização da Api – SGP.\r\n\r\n# Endpoint\r\nO endpoint de conexão com a API REST JSON é executado em localhost.\r\n\r\n# Recursos disponíveis\r\nAtualmente existem os seguintes recursos abaixo que você pode manipular através dos métodos GET, POST, PUT e DELETE:\r\n\r\n* Cliente (client)\r\n* Serviço (service)\r\n\r\n# Tratamento de dados\r\nTodos os dados enviados e recebidos pela API estão/deverão ser em formato JSON (application/json).\r\n\r\n# Autenticação\r\nNão é preciso utilizar autenticação para fazer requisições a esta API.\r\n\r\n# Error Codes\r\n**400 – Bad Request**\r\nDados enviados de forma incorreta ou fora do padrão\r\n\r\n**403 – Forbidden**\r\nSem autorização suficiente para acessar o recurso desejado",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22991804",
+    "_collection_link": "https://go.postman.co/collection/13561974-27657cb8-af0a-4efe-a940-f1cfa0f0d84c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Cliente",
+      "item": [
+        {
+          "name": "Adicionar Cliente",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"pedro\",\r\n    \"cpf\": 12341,\r\n    \"endereco\": \"sdfadf\",\r\n    \"fone\": 231,\r\n    \"email\": \"asdf@sfd\",\r\n    \"pis\": 234,\r\n    \"obs\": \"observacao\"    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/client/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "client",
+                "save"
+              ]
+            },
+            "description": "Adiciona novo Cliente ao sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Cliente",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"pedro\",\r\n    \"cpf\": 12341,\r\n    \"endereco\": \"sdfadf\",\r\n    \"fone\": 231,\r\n    \"email\": \"asdf@sfd\",\r\n    \"pis\": 234,\r\n    \"obs\": \"observacao\"    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/client/get",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "client",
+                "get"
+              ]
+            },
+            "description": "Exibe lista de todos os clientes cadastrados no sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar Cliente",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cpf\": 12341,\r\n    \"endereco\": \"sdfa\",\r\n    \"fone\": 333,\r\n    \"email\": \"ss@ss\",\r\n    \"pis\": 4444,\r\n    \"obs\": \"observacao\"    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/client/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "client",
+                "update"
+              ]
+            },
+            "description": "Atualiza dados de Cliente já cadastrado no sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Cliente",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/client/delete?cpf=12341",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "client",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "cpf",
+                  "value": "12341"
+                }
+              ]
+            },
+            "description": "Exclui do sistema um ou mais Clientes."
+          },
+          "response": []
+        }
+      ],
+      "description": "Está pasta representa um objeto do tipo Cliente na Doc Api – SGP",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Serviço",
+      "item": [
+        {
+          "name": "Adicionar Serviço",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"name\": \"joao\",\r\n        \"precoMin\": \"20.99\",\r\n        \"obs\": \"obs\"\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/service/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "service",
+                "save"
+              ]
+            },
+            "description": "Adiciona novo Serviço ao sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Serviço",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/service/get",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "service",
+                "get"
+              ]
+            },
+            "description": "Exibe lista de Serviços cadastrados no sistema.\n\n    {\n        \"name\": \"joao\",\n        \"precoMin\": \"20.99\",\n        \"obs\": \"obs\"\n    }"
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar Serviço",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"name\": \"joao\",\r\n        \"precoMin\": \"99.99\",\r\n        \"obs\": \"atualizado\"\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/service/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "service",
+                "update"
+              ]
+            },
+            "description": "Atualiza uma ou mais informações de um Serviço já cadastrado."
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Serviço",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/service/delete?name=joao",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "service",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "joao"
+                }
+              ]
+            },
+            "description": "Exclui do sistema um ou mais serviços."
+          },
+          "response": []
+        }
+      ],
+      "description": "Está pasta representa um objeto do tipo Serviço na Api – SGP.\r\n\r\n",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Meus Serviços",
+      "item": [
+        {
+          "name": "Listar Meus Serviços",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/myService/get",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "myService",
+                "get"
+              ]
+            },
+            "description": "Exibe lista de meus serviços cadastrados."
+          },
+          "response": []
+        },
+        {
+          "name": "Adicionar Meus Serviços",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"client\": \"123.432.543-01\"\r\n    \"dtPgm\": \"2020-12-10\"\r\n    \"dtVenc\": \"2020-11-04\"\r\n    \"obs\": \"\"\r\n    \"qtdeParcela\": \"60\"\r\n    \"service\": \"Padaria delivery\"\r\n    \"vlrTotal\": \"33.99\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/myService/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "myService",
+                "save"
+              ]
+            },
+            "description": "Adicionar um novo registro de Meus Serviços ao sistema"
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar Meus Serviços",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 2,\r\n    \"dtPgm\": null,\r\n    \"dtVenc\": \"2020-11-04\",\r\n    \"obs\": \"\",\r\n    \"qtdeParcela\": \"60\",\r\n    \"vlrTotal\": \"33.99\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/myService/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "myService",
+                "update"
+              ]
+            },
+            "description": "Atualizar registro Meu Serviço no sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir Meus Serviços",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/myService/delete?id=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "myService",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Excluir item ou conjunto de items Meus Serviços do sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Meus Serviços Vencidos",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/myService/vencidos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "myService",
+                "vencidos"
+              ]
+            },
+            "description": "Exibe lista de Meus Serviços em atraso (sem data de pagamento e com data de vencimento anterior ao dia corrente)."
+          },
+          "response": []
+        }
+      ],
+      "description": "Pasta com o detalhamento para Meus Serviços."
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
