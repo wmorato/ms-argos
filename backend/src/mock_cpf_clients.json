@@ -1,0 +1,105 @@
+[
+  {
+    "provider": "Acme Telecom",
+    "status": "PENDING",
+    "hasDebt": true,
+    "message": "1 contrato(s) encontrado(s). Boletos pendentes: 2",
+    "contracts": [{"id": 101, "name": "Fibra 300MB"}],
+    "invoices": [
+      {"vencimento": "2024-02-15", "valor": 89.90, "link": "https://acme.com/fatura/1"},
+      {"vencimento": "2024-03-15", "valor": 89.90, "link": "https://acme.com/fatura/2"}
+    ],
+    "address": "Av. Brasil, 1500 - Centro",
+    "totalDebt": 179.80
+  },
+  {
+    "provider": "Acme Energy",
+    "status": "PENDING",
+    "hasDebt": true,
+    "message": "1 contrato(s) encontrado(s). Boletos pendentes: 1",
+    "contracts": [{"id": 202, "name": "Residencial B1"}],
+    "invoices": [{"vencimento": "2024-03-10", "valor": 245.50, "link": "https://acme.com/energy/1"}],
+    "address": "Rua das Laranjeiras, 45 - Jd. Europa",
+    "totalDebt": 245.50
+  },
+  {
+    "provider": "Acme Water",
+    "status": "OK",
+    "hasDebt": false,
+    "message": "Contrato ativo, sem débitos.",
+    "contracts": [{"id": 303, "name": "Consumo Mensal"}],
+    "invoices": [],
+    "address": "Rua XV de Novembro, 88 - Vila Nova",
+    "totalDebt": 0
+  },
+  {
+    "provider": "Acme Health",
+    "status": "PENDING",
+    "hasDebt": true,
+    "message": "Plano de saúde com mensalidade em atraso.",
+    "contracts": [{"id": 404, "name": "Plano Gold Individual"}],
+    "invoices": [{"vencimento": "2024-01-20", "valor": 450.00, "link": "https://acme.com/health/1"}],
+    "address": "Al. Santos, 1200 - SP",
+    "totalDebt": 450.00
+  },
+  {
+    "provider": "Acme Insurance",
+    "status": "OK",
+    "hasDebt": false,
+    "message": "Seguro em dia.",
+    "contracts": [{"id": 505, "name": "Seguro Auto"}],
+    "invoices": [],
+    "address": "Av. Paulista, 2000 - SP",
+    "totalDebt": 0
+  },
+  {
+    "provider": "Acme Education",
+    "status": "PENDING",
+    "hasDebt": true,
+    "message": "Parcela de curso pendente.",
+    "contracts": [{"id": 606, "name": "MBA Gestão"}],
+    "invoices": [{"vencimento": "2024-03-05", "valor": 1200.00, "link": "https://acme.com/edu/1"}],
+    "address": "Rua Oscar Freire, 500 - SP",
+    "totalDebt": 1200.00
+  },
+  {
+    "provider": "Acme Fitness",
+    "status": "PENDING",
+    "hasDebt": true,
+    "message": "Mensalidade academia em atraso.",
+    "contracts": [{"id": 707, "name": "Plano Black"}],
+    "invoices": [{"vencimento": "2024-02-28", "valor": 99.00, "link": "https://acme.com/gym/1"}],
+    "address": "Av. Rebouças, 300 - SP",
+    "totalDebt": 99.00
+  },
+  {
+    "provider": "Acme Rent-a-Car",
+    "status": "OK",
+    "hasDebt": false,
+    "message": "Nenhuma locação pendente.",
+    "contracts": [{"id": 808, "name": "Aluguel Diário"}],
+    "invoices": [],
+    "address": "Rua da Consolação, 10 - SP",
+    "totalDebt": 0
+  },
+  {
+    "provider": "Acme Streaming",
+    "status": "PENDING",
+    "hasDebt": true,
+    "message": "Assinatura pausada por falta de pagamento.",
+    "contracts": [{"id": 909, "name": "Plano Premium 4K"}],
+    "invoices": [{"vencimento": "2024-03-01", "valor": 55.90, "link": "https://acme.com/play/1"}],
+    "address": "Vila Madalena, 123 - SP",
+    "totalDebt": 55.90
+  },
+  {
+    "provider": "Acme Bank",
+    "status": "PENDING",
+    "hasDebt": true,
+    "message": "Fatura de cartão de crédito vencida.",
+    "contracts": [{"id": 1010, "name": "Cartão Platinum"}],
+    "invoices": [{"vencimento": "2024-02-10", "valor": 3500.25, "link": "https://acme.com/bank/1"}],
+    "address": "Av. Brig. Faria Lima, 3500 - SP",
+    "totalDebt": 3500.25
+  }
+]

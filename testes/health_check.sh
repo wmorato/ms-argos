@@ -102,7 +102,7 @@ FE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$FRONTEND_URL/argos/"
 # ---- 8. PostgreSQL via Docker ----
 echo ""
 echo "[ 8 ] Banco de Dados"
-if sudo docker exec argos-postgres pg_isready -U u_bd_ms_argos -d ms_argos > /dev/null 2>&1; then
+if docker exec argos-postgres pg_isready -U u_bd_ms_argos -d ms_argos > /dev/null 2>&1; then
   ok "PostgreSQL (argos-postgres) respondendo"
 else
   fail "PostgreSQL não respondeu"
@@ -113,6 +113,32 @@ echo ""
 echo "[ 9 ] Nginx → /argos/api/"
 NGINX_API=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "https://moratosolucoes.com.br/argos/api/health" 2>/dev/null || echo "000")
 [ "$NGINX_API" = "200" ] && ok "HTTPS /argos/api/health → $NGINX_API" || fail "HTTPS /argos/api/health → $NGINX_API (verifique nginx)"
+
+# ---- 10. Test Mode (Acme) ----
+echo ""
+echo "[ 10 ] Modo Teste (Empresa Acme)"
+ACME_LOGIN=$(curl -s --max-time 15 -X POST "$BASE_URL/api/auth/login" \
+  -H "Content-Type: application/json" \
+  -d '{"email":"wilsonmorato@gmail.com","password":"changeme123"}')
+ACME_TOKEN=$(echo "$ACME_LOGIN" | jq -r '.token // empty' 2>/dev/null)
+
+if [ -n "$ACME_TOKEN" ] && [ "$ACME_TOKEN" != "null" ]; then
+  SEARCH_RES=$(curl -s --max-time 15 -X POST "$BASE_URL/api/search" \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $ACME_TOKEN" \
+    -d '{"document":"12345678901"}')
+  
+  IS_TEST=$(echo "$SEARCH_RES" | jq -r '.isTestMode // false' 2>/dev/null)
+  RES_COUNT=$(echo "$SEARCH_RES" | jq -r '.results | length' 2>/dev/null)
+  
+  if [ "$IS_TEST" = "true" ] && [ "$RES_COUNT" = "3" ]; then
+    ok "Busca CPF em Modo Teste retornou 3 resultados e isTestMode=true"
+  else
+    fail "Modo Teste falhou: isTestMode=$IS_TEST, results=$RES_COUNT"
+  fi
+else
+  fail "Falha no login da Acme para teste de modo teste: $ACME_LOGIN"
+fi
 
 # ---- Resultado ----
 echo ""

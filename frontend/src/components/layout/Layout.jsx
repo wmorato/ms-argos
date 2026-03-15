@@ -107,7 +107,12 @@ export default function Layout({ children }) {
                     <div className={styles.avatar}>{initials}</div>
                     <div className={styles.userInfo}>
                         <span className={styles.userName}>{user?.name}</span>
-                        <span className={styles.userRole}>{user?.role}</span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                            <span className={styles.userRole}>{user?.role}</span>
+                            {user?.companyName?.toLowerCase() === 'acme' && (
+                                <span className="badge badge-warning" style={{ fontSize: '9px', padding: '2px 4px' }}>TESTE</span>
+                            )}
+                        </div>
                     </div>
                     <button className={styles.logoutBtn} onClick={handleLogout} title="Sair">
                         <LogOut size={16} />

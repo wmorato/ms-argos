@@ -19,7 +19,17 @@ export default function UsersPage() {
     function load() {
         setLoading(true)
         Promise.all([api.get('/users'), api.get('/companies')])
-            .then(([u, c]) => { setUsers(u.data.users); setCompanies(c.data.companies) })
+            .then(([u, c]) => { 
+                setUsers(u.data.users); 
+                const comps = c.data.companies;
+                setCompanies(comps);
+                
+                // Define Acme como default se estiver criando novo
+                if (!editingId && !form.companyId) {
+                    const acme = comps.find(comp => comp.name.toLowerCase() === 'acme');
+                    if (acme) setForm(f => ({ ...f, companyId: acme.id }));
+                }
+            })
             .catch(() => toast.error('Erro ao carregar dados.'))
             .finally(() => setLoading(false))
     }
